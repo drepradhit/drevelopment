@@ -39,27 +39,31 @@ Folder `backend` (Laravel) yang ada di komputer Anda saat ini **tidak digunakan*
 
 ## Bonus: Domain Gratis (GitHub Student Pack) 🎓
 
-Karena Anda punya **GitHub Student Developer Pack**, Anda bisa mendapatkan **Domain Premium Gratis** selama 1 tahun untuk membuat website terlihat lebih profesional (tanpa embel-embel `.vercel.app`).
+Jika jatah Namecheap (`.me`) sudah terpakai, Anda masih punya kesempatan di provider lain yang ada di GitHub Student Pack!
 
-**Rekomendasi Provider di GitHub Student Pack:**
+**Alternatif Provider Gratis:**
 
-1.  **Namecheap (Paling Populer)**
-    *   **Benefit**: Gratis 1 domain **.me** selama 1 tahun.
-    *   **Cocok untuk**: Personal branding atau portofolio (`drevelopment.me`).
-    *   **Cara Claim**: Buka [nc.me](https://nc.me) dan login dengan GitHub Student Anda.
+1.  **Name.com (Paling Banyak Pilihan!)**
+    *   **Benefit**: Gratis 1 Domain (1 Tahun) + SSL + Privacy.
+    *   **Pilihan Domain**: `.live`, `.studio`, `.software`, `.news`, `.video`, `.design` (Tergantung promo).
+    *   **Rekomendasi**: `drevelopment.software` atau `drevelopment.studio`.
+    *   **Cara Claim**: Cari "Name.com" di menu GitHub Student Pack.
 
 2.  **.TECH Domains**
-    *   **Benefit**: Gratis 1 domain **.tech** selama 1 tahun.
-    *   **Cocok untuk**: Software house atau tech agency (`drevelopment.tech` - Sangat keren!).
-    *   **Cara Claim**: Cari ".TECH" di halaman benefit GitHub Student Pack.
+    *   **Benefit**: Gratis 1 domain **.tech** (Standard) selama 1 tahun.
+    *   **Cocok untuk**: Software house, tech agency, startup (`drevelopment.tech`).
+    *   **Cara Claim**: Cari ".TECH" di menu GitHub Student Pack.
 
-3.  **Name.com**
-    *   **Benefit**: Gratis 1 domain gratis + SSL.
+3.  **Microsoft Azure** (Opsional)
+    *   Kadang memberikan kredit $100 yang bisa digunakan untuk membeli domain via Azure App Service, namun prosesnya lebih rumit.
+
+**Tips:**
+Jika semua jatah gratis sudah habis, Anda bisa mempertimbangkan domain **`.my.id`** di provider lokal (seperti Niagahoster, Domainesia, JagoanHosting). Harganya sangat murah, cuma **Rp 10.000 - Rp 12.000 per tahun**.
 
 **Cara Menghubungkan Domain ke Vercel:**
 1.  Claim domain di salah satu provider di atas.
 2.  Buka Dashboard Vercel project Anda > **Settings** > **Domains**.
 3.  Masukkan nama domain Anda (misal: `drevelopment.tech`) > Klik **Add**.
 4.  Vercel akan memberikan **Nameservers** (misal `ns1.vercel-dns.com`).
-5.  Masuk ke dashboard provider domain (Namecheap/etc), cari menu **"Nameservers"**, pilih "Custom DNS", dan masukkan Nameservers dari Vercel tadi.
-6.  Tunggu beberapa menit/jam, domain Anda aktif! 🌐
+5.  Masuk ke dashboard provider domain, cari menu **"Nameservers"**, pilih "Custom DNS", dan masukkan Nameservers dari Vercel tadi.
+6.  Tunggu propagasi DNS (bisa 1 menit sampai 24 jam). Website Anda live! 🌐
