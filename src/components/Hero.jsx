@@ -18,17 +18,7 @@ const Hero = () => {
                 .from(".hero-badge", { scale: 0, opacity: 0, stagger: 0.2, duration: 0.8 }, "-=0.6")
                 .from(ctaRef.current, { y: 30, opacity: 0, duration: 0.8 }, "-=0.6");
 
-            // Floating Animation for Badges (Continuous)
-            gsap.to(".hero-badge", {
-                y: -10,
-                duration: 2,
-                stagger: {
-                    each: 0.3,
-                    yoyo: true,
-                    repeat: -1
-                },
-                ease: "sine.inOut"
-            });
+            // Floating animation removed per user request
 
         }, containerRef);
 
