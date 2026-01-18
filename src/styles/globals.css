@@ -3,8 +3,8 @@
 @theme {
   /* Premium Warm Palette - Sophisticated & Inviting */
   --color-primary: #1A1A1A;
-  --color-accent: #FF5500;
-  --color-accent-light: #FF7733;
+  --color-accent: #FF7700;
+  --color-accent-light: #FF9933;
 
   --color-cream: #FAF8F5;
   --color-warm-gray: #F5F3F0;
@@ -38,7 +38,7 @@
   }
 
   ::selection {
-    background: #FF4D00;
+    background: #FF7700;
     color: white;
   }
 
