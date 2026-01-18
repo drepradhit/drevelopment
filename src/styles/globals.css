@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  /* Premium Warm Palette - Sophisticated & Inviting */
+  --color-primary: #1A1A1A;
+  --color-accent: #FF5500;
+  --color-accent-light: #FF7733;
+
+  --color-cream: #FAF8F5;
+  --color-warm-gray: #F5F3F0;
+
+  --color-text: #1A1A1A;
+  --color-text-muted: #6B6B6B;
+  --color-text-light: #999999;
+
+  --color-border: #E8E5E1;
+  --color-border-dark: #D4D0CA;
+
+  --font-sans: "Poppins", sans-serif;
+}
+
+@layer utilities {
+  .font-logo-d {
+    font-family: "Montserrat Alternates", sans-serif;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply font-sans bg-cream text-primary;
+  }
+
+  ::selection {
+    background: #FF4D00;
+    color: white;
+  }
+}
+
+@layer utilities {
+  .container-wide {
+    @apply mx-auto px-6 md:px-12 lg:px-20;
+    max-width: 1800px;
+  }
+
+  .section-padding {
+    @apply py-24 md:py-32 lg:py-40;
+  }
+
+  .heading-display {
+    font-size: 8rem;
+    @apply font-bold leading-none tracking-tighter;
+  }
+
+  @media (max-width: 768px) {
+    .heading-display {
+      font-size: 3.5rem;
+    }
+  }
+
+  .heading-xl {
+    font-size: 5rem;
+    @apply font-bold leading-none tracking-tight;
+  }
+
+  @media (max-width: 768px) {
+    .heading-xl {
+      font-size: 2.5rem;
+    }
+  }
+
+  .body-large {
+    @apply text-xl md:text-2xl leading-relaxed;
+  }
+
+  .split-text .char {
+    @apply inline-block;
+  }
+}
