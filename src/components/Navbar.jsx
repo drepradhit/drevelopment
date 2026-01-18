@@ -40,7 +40,7 @@ const Navbar = () => {
                         <img
                             src="/images/Logo Drevelopment No BG.png"
                             alt="Drevelopment Logo"
-                            className={`object-contain transition-all duration-300 -mt-1.5 ${isScrolled ? 'h-12' : 'h-16'}`}
+                            className={`object-contain transition-all duration-300 -mt-1.5 ${isScrolled ? 'h-10 md:h-12' : 'h-12 md:h-16'}`}
                         />
                     </a>
 

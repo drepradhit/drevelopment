@@ -92,7 +92,7 @@ const Pricing = () => {
                         <div
                             key={plan.name}
                             ref={el => cardsRef.current[index] = el}
-                            className="group relative bg-white rounded-[2rem] p-8 border border-border/50 transition-all duration-500 hover:border-accent hover:-translate-y-3 hover:shadow-2xl hover:shadow-accent/15 flex flex-col h-full"
+                            className="group relative bg-white rounded-[1.5rem] p-5 md:p-8 border border-border/50 transition-all duration-500 hover:border-accent hover:-translate-y-3 hover:shadow-2xl hover:shadow-accent/15 flex flex-col h-full"
                         >
                             {/* Hover Top Line */}
                             <div className="absolute top-0 left-10 right-10 h-1 bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 rounded-b-full" />
@@ -105,11 +105,11 @@ const Pricing = () => {
                             <div className="mb-8">
                                 <div className="flex items-end gap-1">
                                     <span className="text-text-muted font-medium pb-2">Rp</span>
-                                    <span className="text-5xl font-black text-primary tracking-tight">{plan.price}</span>
+                                    <span className="text-3xl md:text-5xl font-black text-primary tracking-tight">{plan.price}</span>
                                 </div>
                             </div>
 
-                            <ul className="space-y-4 mb-10 flex-grow">
+                            <ul className="space-y-3 md:space-y-4 mb-8 md:mb-10 flex-grow">
                                 {plan.features.map((feature, idx) => (
                                     <li key={idx} className="flex items-start gap-3 text-sm text-text-muted group/item">
                                         <div className="mt-0.5 p-1 rounded-full bg-cream group-hover:bg-accent/10 transition-colors duration-300">

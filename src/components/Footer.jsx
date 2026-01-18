@@ -26,7 +26,7 @@ const Footer = () => {
     return (
         <footer ref={footerRef} className="bg-cream pt-20 pb-10">
             <div className="container-wide">
-                <div className="bg-white rounded-[3rem] p-8 md:p-16 border border-border/50 shadow-xl shadow-gray-100/50">
+                <div className="bg-white rounded-[3rem] p-5 md:p-16 border border-border/50 shadow-xl shadow-gray-100/50">
 
                     <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-10 md:gap-20">
 
@@ -36,10 +36,10 @@ const Footer = () => {
                                 <img
                                     src="/images/Logo Drevelopment No BG.png"
                                     alt="Drevelopment Logo"
-                                    className="h-16 md:h-20 w-auto object-contain mx-auto md:mx-0"
+                                    className="h-10 md:h-20 w-auto object-contain mx-auto md:mx-0"
                                 />
                             </a>
-                            <p className="text-text-muted text-lg leading-relaxed mb-8">
+                            <p className="text-text-muted text-sm md:text-lg leading-relaxed mb-8">
                                 Membangun website & UI/UX premium yang terpercaya untuk pertumbuhan bisnis Anda.
                             </p>
 

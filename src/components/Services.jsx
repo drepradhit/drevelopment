@@ -25,7 +25,7 @@ const Services = () => {
                 {/* Header Section */}
                 {/* Header Section */}
                 <div className="text-center mb-16 max-w-4xl mx-auto">
-                    <h2 className="text-4xl md:text-6xl font-bold font-display leading-tight mb-6 text-primary">
+                    <h2 className="text-3xl md:text-6xl font-bold font-display leading-tight mb-6 text-primary">
                         Layanan Kami <br className="hidden md:block" />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-500">
                             Solusi Digital Bisnis.
@@ -41,11 +41,11 @@ const Services = () => {
                     {services.map((service, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-[2.5rem] p-8 md:p-12 shadow-xl hover:shadow-2xl hover:shadow-accent/5 transition-all duration-300 relative group border border-gray-100/50"
+                            className="bg-white rounded-[1.5rem] md:rounded-[2.5rem] p-5 md:p-12 shadow-xl hover:shadow-2xl hover:shadow-accent/5 transition-all duration-300 relative group border border-gray-100/50"
                         >
                             {/* Top Row: Number & Price Badge */}
                             <div className="flex justify-between items-start mb-8">
-                                <div className="text-6xl font-black text-gray-100 select-none">
+                                <div className="text-5xl md:text-6xl font-black text-gray-100 select-none">
                                     0{index + 1}
                                 </div>
                                 <div className="px-6 py-2 bg-gradient-to-r from-accent to-orange-600 text-white font-bold rounded-full text-sm shadow-md shadow-orange-200">
@@ -54,7 +54,7 @@ const Services = () => {
                             </div>
 
                             {/* Title & Desc */}
-                            <h3 className="text-3xl font-bold text-primary mb-6">
+                            <h3 className="text-xl md:text-3xl font-bold text-primary mb-4 md:mb-6">
                                 {service.title}
                             </h3>
 

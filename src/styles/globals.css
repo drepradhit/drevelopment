@@ -71,7 +71,7 @@
   }
 
   .section-padding {
-    @apply py-24 md:py-32 lg:py-40;
+    @apply py-10 md:py-32 lg:py-40;
   }
 
   .heading-display {
@@ -81,7 +81,7 @@
 
   @media (max-width: 768px) {
     .heading-display {
-      font-size: 3.5rem;
+      font-size: 2.5rem;
     }
   }
 
@@ -92,12 +92,12 @@
 
   @media (max-width: 768px) {
     .heading-xl {
-      font-size: 2.5rem;
+      font-size: 2rem;
     }
   }
 
   .body-large {
-    @apply text-xl md:text-2xl leading-relaxed;
+    @apply text-base md:text-2xl leading-relaxed;
   }
 
   .split-text .char {

@@ -84,7 +84,7 @@ const Process = () => {
                 {/* Header */}
                 <div ref={headerRef} className="text-center mb-20 md:mb-28">
                     <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">Process</span>
-                    <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                    <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
                         Bagaimana kami bekerja.
                     </h2>
                 </div>
@@ -109,9 +109,9 @@ const Process = () => {
                                 >
                                     {/* Content Card */}
                                     <div className={`w-full md:w-[45%] ${isLeft ? 'md:pr-12 md:text-right' : 'md:pl-12 md:text-left'}`}>
-                                        <div className="bg-primary rounded-3xl p-8 md:p-10 text-white group hover:scale-[1.02] transition-transform duration-300">
-                                            <span className="text-6xl md:text-7xl font-black text-accent block mb-2">{step.number}</span>
-                                            <h3 className="text-2xl md:text-3xl font-bold mb-4">{step.title}</h3>
+                                        <div className="bg-primary rounded-3xl p-5 md:p-10 text-white group hover:scale-[1.02] transition-transform duration-300">
+                                            <span className="text-4xl md:text-7xl font-black text-accent block mb-2">{step.number}</span>
+                                            <h3 className="text-xl md:text-3xl font-bold mb-4">{step.title}</h3>
                                             <p className="text-white/70 text-lg leading-relaxed">{step.description}</p>
                                         </div>
                                     </div>

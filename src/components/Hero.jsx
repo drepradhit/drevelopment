@@ -32,7 +32,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="min-h-screen bg-cream flex items-center justify-center relative overflow-hidden pt-12 md:pt-24"
+            className="min-h-screen bg-cream flex items-center justify-center relative overflow-hidden pt-4 md:pt-24"
         >
             <div className="container-wide relative z-10">
                 <div className="text-center max-w-5xl mx-auto">
@@ -40,7 +40,7 @@ const Hero = () => {
                     {/* Title */}
                     <h1
                         ref={titleRef}
-                        className="text-6xl md:text-7xl lg:text-8xl font-black text-primary leading-[1] mb-8 tracking-tight"
+                        className="text-4xl md:text-6xl lg:text-8xl font-black text-primary leading-[1.1] mb-4 tracking-tight"
                     >
                         Website Premium.<br />
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent to-orange-500">Budget Minimum.</span>
@@ -48,13 +48,13 @@ const Hero = () => {
 
                     {/* Subtitle */}
                     <div ref={subtitleRef} className="max-w-3xl mx-auto mb-12">
-                        <p className="text-xl md:text-2xl text-primary/80 font-medium leading-relaxed mb-6">
+                        <p className="text-base md:text-2xl text-primary/80 font-medium leading-relaxed mb-6">
                             Kualitas Agensi, Harga Freelance. Bangun kredibilitas bisnis Anda dengan website profesional.
                         </p>
 
                         {/* Key Benefits - Rapi & Menarik */}
                         <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-primary font-semibold text-lg">
-                            <span className="hero-badge flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg shadow-gray-100/50 border border-gray-100">
+                            <span className="hero-badge flex items-center gap-1.5 px-3 py-1.5 text-xs md:text-base md:px-6 md:py-3 bg-white rounded-full shadow-lg shadow-gray-100/50 border border-gray-100">
                                 <CheckCircle2 className="w-5 h-5 text-accent" /> Cepat
                             </span>
                             <span className="hero-badge flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-lg shadow-gray-100/50 border border-gray-100">
@@ -72,7 +72,7 @@ const Hero = () => {
                             href={whatsappLink}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group px-10 py-4 bg-primary text-white rounded-full font-bold text-xl flex items-center gap-3 hover:bg-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300"
+                            className="group px-6 py-3 md:px-10 md:py-4 bg-primary text-white rounded-full font-bold text-base md:text-xl flex items-center gap-2 md:gap-3 hover:bg-accent hover:shadow-xl hover:shadow-accent/20 transition-all duration-300"
                         >
                             <span>Konsultasi Gratis</span>
                             <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />

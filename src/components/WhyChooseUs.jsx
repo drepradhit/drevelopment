@@ -82,7 +82,7 @@ const WhyChooseUs = () => {
                 {/* Header */}
                 <div ref={headerRef} className="text-center max-w-3xl mx-auto mb-20">
                     <span className="text-accent font-semibold tracking-widest uppercase text-sm mb-4 block">The Difference</span>
-                    <h2 className="text-4xl md:text-5xl font-bold text-primary leading-tight mb-6">
+                    <h2 className="text-3xl md:text-5xl font-bold text-primary leading-tight mb-6">
                         Kenapa harus <span className="text-accent">drevelopment</span>?
                     </h2>
                     <p className="text-xl text-text-muted leading-relaxed">
@@ -96,18 +96,18 @@ const WhyChooseUs = () => {
                         <div
                             key={index}
                             ref={el => cardsRef.current[index] = el}
-                            className="group bg-white p-10 rounded-3xl border border-transparent hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 w-full hover:-translate-y-2 relative overflow-hidden"
+                            className="group bg-white p-5 md:p-10 rounded-3xl border border-transparent hover:border-accent/30 hover:shadow-xl hover:shadow-accent/5 transition-all duration-300 w-full hover:-translate-y-2 relative overflow-hidden"
                         >
                             {/* Badge */}
                             <div
-                                className="text-sm font-bold text-accent mb-6 px-3 py-1 bg-accent/10 w-fit rounded-full transition-transform duration-300 group-hover:scale-105 origin-left"
+                                className="text-sm font-bold text-accent mb-4 md:mb-6 px-3 py-1 bg-accent/10 w-fit rounded-full transition-transform duration-300 group-hover:scale-105 origin-left"
                             >
                                 {item.number}
                             </div>
 
                             {/* Text */}
                             <div>
-                                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
+                                <h3 className="text-xl md:text-3xl font-bold text-primary mb-4 group-hover:text-accent transition-colors duration-300">
                                     {item.title}
                                 </h3>
                                 <p className="text-text-muted text-lg leading-relaxed">
