@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { CheckCircle2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -93,9 +94,10 @@ const Hero = () => {
                         </div>
 
                         {/* Mobile Subtext - Redesigned as Premium Pill */}
-                        <div className="mt-6 md:hidden animate-fade-in-up delay-300">
-                            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-md border border-white/50 rounded-full shadow-lg shadow-black/5 mx-auto">
-                                <span className="text-sm font-bold text-primary tracking-wide">
+                        <div className="mt-8 md:hidden animate-fade-in-up delay-300 px-4">
+                            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-xl border border-accent/20 rounded-full shadow-2xl shadow-accent/10 mx-auto transform transition-transform hover:scale-105">
+                                <CheckCircle2 className="w-5 h-5 text-accent fill-accent/10" />
+                                <span className="text-[15px] font-bold text-primary tracking-wide">
                                     Website <span className="text-accent">Premium</span>. Harga <span className="text-accent">Minimum</span>.
                                 </span>
                             </div>
