@@ -73,7 +73,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="min-h-screen bg-cream flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
+            className="min-h-screen bg-[#1a2e4a] flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
         >
             {/* Parallax Layers */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
@@ -82,7 +82,6 @@ const Hero = () => {
                     ref={skyRef}
                     src="/images/sky.jpg"
                     alt="Sky Background"
-                    loading="lazy"
                     className="absolute inset-0 w-full h-full object-cover z-0"
                 />
 
