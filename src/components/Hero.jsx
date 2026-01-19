@@ -75,7 +75,7 @@ const Hero = () => {
                         ref={midRef}
                         src="/images/city.png"
                         alt="City Skyline"
-                        className="absolute bottom-0 left-0 w-full h-[70%] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
+                        className="absolute bottom-0 left-0 w-full h-[55svh] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
                     />
                 </picture>
             </div>
@@ -90,6 +90,15 @@ const Hero = () => {
                             <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-transparent bg-clip-text bg-gradient-to-b from-primary to-black drop-shadow-2xl opacity-90">
                                 DREVELOPMENT
                             </h1>
+                        </div>
+
+                        {/* Mobile Subtext - Redesigned as Premium Pill */}
+                        <div className="mt-6 md:hidden animate-fade-in-up delay-300">
+                            <div className="inline-flex items-center gap-2 px-5 py-2.5 bg-white/80 backdrop-blur-md border border-white/50 rounded-full shadow-lg shadow-black/5 mx-auto">
+                                <span className="text-sm font-bold text-primary tracking-wide">
+                                    Website <span className="text-accent">Premium</span>. Harga <span className="text-accent">Minimum</span>.
+                                </span>
+                            </div>
                         </div>
                     </div>
 
