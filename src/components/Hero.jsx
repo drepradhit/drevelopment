@@ -92,7 +92,7 @@ const Hero = () => {
                         ref={midRef}
                         src="/images/city.png"
                         alt="City Skyline"
-                        className="absolute bottom-0 left-0 w-full h-[70vh] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
+                        className="absolute bottom-0 left-0 w-full h-[70%] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
                     />
                 </picture>
             </div>
