@@ -73,7 +73,7 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="min-h-[calc(var(--vh,1vh)*100)] bg-[#1a2e4a] flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
+            className="h-ig-safe bg-[#1a2e4a] flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
         >
             {/* Parallax Layers */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">

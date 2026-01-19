@@ -23,17 +23,23 @@
   .font-logo-d {
     font-family: "Montserrat Alternates", sans-serif;
   }
+
+  .h-ig-safe {
+    height: calc(var(--vh, 1vh) * 100);
+  }
 }
 
 @layer base {
   html {
     scroll-behavior: auto;
     scrollbar-gutter: stable;
+    overscroll-behavior: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   body {
+    overscroll-behavior: none;
     @apply font-sans bg-cream text-primary;
   }
 
