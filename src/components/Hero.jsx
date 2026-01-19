@@ -70,11 +70,12 @@ const Hero = () => {
 
                 {/* 2. User-Provided City Layer - Responsive Images */}
                 <picture>
-                    <source media="(max-width: 768px)" srcSet="/images/city.png" />
+                    <source media="(max-width: 768px)" srcSet="/images/city.webp" />
                     <img
                         ref={midRef}
-                        src="/images/city.png"
-                        alt="City Skyline"
+                        src="/images/city.webp"
+                        alt="City Skyline of Bandung"
+                        fetchpriority="high"
                         className="absolute bottom-0 left-0 w-full h-[70%] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
                     />
                 </picture>

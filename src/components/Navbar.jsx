@@ -36,6 +36,7 @@ const Navbar = () => {
                         {/* Logo */}
                         <a
                             href="#hero"
+                            aria-label="Back to Homepage"
                             onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
                             className="transition-all duration-300 flex items-center cursor-pointer"
                         >
