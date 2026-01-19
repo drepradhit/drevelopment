@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Home from './pages/Home';
 
 gsap.registerPlugin(ScrollTrigger);
+// Prevents GSAP from refreshing on mobile address bar show/hide (Stops jumping!)
+ScrollTrigger.config({ ignoreMobileResize: true });
 
 function App() {
   useEffect(() => {
