@@ -23,18 +23,7 @@ const Hero = () => {
             tl.from(titleRef.current, { y: 30, duration: 0.8, ease: "power2.out" }, 0);
 
 
-            // Parallax Effects
-            // Sky moves very slowly (background)
-            gsap.to(skyRef.current, {
-                yPercent: 20,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
-            });
+
 
             // Mid ground moves at medium speed
             gsap.to(midRef.current, {
@@ -73,17 +62,11 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="h-ig-safe bg-[#1a2e4a] flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
+            className="h-screen bg-cream flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
         >
             {/* Parallax Layers */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
-                {/* 1. User-Provided Sky Layer */}
-                <img
-                    ref={skyRef}
-                    src="/images/sky.jpg"
-                    alt="Sky Background"
-                    className="absolute inset-0 w-full h-full object-cover z-0"
-                />
+                {/* 1. Sky Removed - Background is now bg-cream */}
 
                 {/* 2. User-Provided City Layer - Responsive Images */}
                 <picture>
@@ -104,7 +87,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center justify-center mb-8 md:mb-12 w-full">
                         {/* Title - Centered */}
                         <div className="relative">
-                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-200 drop-shadow-[0_10px_25px_rgba(0,0,0,0.5)]">
+                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-transparent bg-clip-text bg-gradient-to-b from-primary to-black drop-shadow-2xl opacity-90">
                                 DREVELOPMENT
                             </h1>
                         </div>

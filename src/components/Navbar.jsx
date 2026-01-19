@@ -40,7 +40,7 @@ const Navbar = () => {
                             className="transition-all duration-300 flex items-center cursor-pointer"
                         >
                             <img
-                                src={isScrolled ? "/images/Logo Drevelopment No BG.png" : "/images/logo hero.png"}
+                                src="/images/Logo Drevelopment No BG.png"
                                 alt="Drevelopment Logo"
                                 className={`object-contain transition-all duration-300 -mt-1.5 ${isScrolled ? 'h-8 md:h-12' : 'h-10 md:h-16'}`}
                             />
@@ -64,8 +64,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`hover:text-accent transition-colors font-medium text-sm md:text-base ${isScrolled ? 'text-primary md:text-sm' : 'text-white'
-                                    }`}
+                                className={`hover:text-accent transition-colors font-medium text-sm md:text-base text-primary md:text-sm`}
                             >
                                 {link.name}
                             </a>
