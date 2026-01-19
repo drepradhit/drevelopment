@@ -1,14 +1,12 @@
 import React, { useLayoutEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { CheckCircle2 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
     const containerRef = useRef(null);
     const titleRef = useRef(null);
-    const skyRef = useRef(null);
     const midRef = useRef(null);
     const contentRef = useRef(null);
 
@@ -24,6 +22,7 @@ const Hero = () => {
             tl.from(titleRef.current, { y: 30, duration: 0.8, ease: "power2.out" }, 0);
 
 
+            // Parallax Effects
 
 
             // Mid ground moves at medium speed
@@ -63,11 +62,11 @@ const Hero = () => {
     return (
         <section
             ref={containerRef}
-            className="h-screen bg-cream flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
+            className="h-ig-safe bg-cream flex items-center justify-center relative overflow-hidden pt-20 md:pt-24 perspective-1000"
         >
             {/* Parallax Layers */}
             <div className="absolute inset-0 w-full h-full pointer-events-none">
-                {/* 1. Sky Removed - Background is now bg-cream */}
+                {/* 1. Sky Layer REMOVED as requested */}
 
                 {/* 2. User-Provided City Layer - Responsive Images */}
                 <picture>
@@ -76,7 +75,7 @@ const Hero = () => {
                         ref={midRef}
                         src="/images/city.png"
                         alt="City Skyline"
-                        className="absolute bottom-0 left-0 w-full h-[55svh] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
+                        className="absolute bottom-0 left-0 w-full h-[70%] object-cover object-bottom md:h-auto md:max-h-[80vh] md:object-center z-20"
                     />
                 </picture>
             </div>
@@ -88,19 +87,9 @@ const Hero = () => {
                     <div className="flex flex-col items-center justify-center mb-8 md:mb-12 w-full">
                         {/* Title - Centered */}
                         <div className="relative">
-                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-transparent bg-clip-text bg-gradient-to-b from-primary to-black drop-shadow-2xl opacity-90">
+                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-primary drop-shadow-xl">
                                 DREVELOPMENT
                             </h1>
-                        </div>
-
-                        {/* Mobile Subtext - Redesigned as Premium Pill */}
-                        <div className="mt-8 md:hidden animate-fade-in-up delay-300 px-4">
-                            <div className="inline-flex items-center gap-3 px-6 py-3 bg-white/90 backdrop-blur-xl border border-accent/20 rounded-full shadow-2xl shadow-accent/10 mx-auto transform transition-transform hover:scale-105">
-                                <CheckCircle2 className="w-5 h-5 text-accent fill-accent/10" />
-                                <span className="text-[15px] font-bold text-primary tracking-wide">
-                                    Website <span className="text-accent">Premium</span>. Harga <span className="text-accent">Minimum</span>.
-                                </span>
-                            </div>
                         </div>
                     </div>
 
