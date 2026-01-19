@@ -70,7 +70,7 @@ const Hero = () => {
 
                 {/* 2. User-Provided City Layer - Responsive Images */}
                 <picture>
-                    <source media="(max-width: 768px)" srcSet="/images/city.avif" />
+                    <source media="(max-width: 768px)" srcSet="/images/city-mobile.avif" />
                     <img
                         ref={midRef}
                         src="/images/city.avif"
