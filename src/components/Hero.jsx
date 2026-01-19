@@ -23,42 +23,65 @@ const Hero = () => {
             tl.from(titleRef.current, { y: 30, duration: 0.8, ease: "power2.out" }, 0);
 
 
-            // Parallax Effects
-            // Sky moves very slowly (background)
-            gsap.to(skyRef.current, {
-                yPercent: 20,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+            // Parallax Effects - Responsive
+            const mm = gsap.matchMedia();
+
+            // MOBILE: Full parallax with reduced intensity
+            mm.add("(max-width: 767px)", () => {
+                gsap.to(skyRef.current, {
+                    yPercent: 10,
+                    ease: "none",
+                    scrollTrigger: { trigger: containerRef.current, start: "top top", end: "bottom top", scrub: 0.3 }
+                });
+                gsap.to(midRef.current, {
+                    yPercent: 25,
+                    ease: "none",
+                    scrollTrigger: { trigger: containerRef.current, start: "top top", end: "bottom top", scrub: 0.3 }
+                });
+                gsap.to(contentRef.current, {
+                    yPercent: 30,
+                    ease: "none",
+                    scrollTrigger: { trigger: containerRef.current, start: "top top", end: "bottom top", scrub: 0.3 }
+                });
             });
 
-            // Mid ground moves at medium speed
-            gsap.to(midRef.current, {
-                yPercent: 40,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
-            });
+            // DESKTOP: Full parallax (all layers)
+            mm.add("(min-width: 768px)", () => {
+                // Sky moves very slowly (background)
+                gsap.to(skyRef.current, {
+                    yPercent: 20,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
 
+                // Mid ground moves at medium speed
+                gsap.to(midRef.current, {
+                    yPercent: 40,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
 
-            // Content moves slightly faster than background to float
-            gsap.to(contentRef.current, {
-                yPercent: 50,
-                ease: "none",
-                scrollTrigger: {
-                    trigger: containerRef.current,
-                    start: "top top",
-                    end: "bottom top",
-                    scrub: true
-                }
+                // Content moves slightly faster than background to float
+                gsap.to(contentRef.current, {
+                    yPercent: 50,
+                    ease: "none",
+                    scrollTrigger: {
+                        trigger: containerRef.current,
+                        start: "top top",
+                        end: "bottom top",
+                        scrub: true
+                    }
+                });
             });
 
         }, containerRef);
