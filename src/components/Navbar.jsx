@@ -26,7 +26,7 @@ const Navbar = () => {
         <header className="block fixed top-0 left-0 right-0 z-50 p-4">
             <nav
                 className={`mx-auto transition-all duration-500 ${isScrolled
-                    ? 'max-w-2xl rounded-3xl px-6 py-3 bg-white/80 backdrop-blur-xl shadow-lg'
+                    ? 'max-w-2xl rounded-full px-6 py-3 bg-white/60 backdrop-blur-2xl shadow-lg border border-white/30'
                     : 'max-w-5xl rounded-2xl px-8 py-4 bg-transparent'
                     }`}
             >
@@ -35,11 +35,12 @@ const Navbar = () => {
                     <div className="w-full md:w-auto flex items-center justify-between">
                         {/* Logo */}
                         <a
-                            href="/"
-                            className="transition-all duration-300 flex items-center"
+                            href="#hero"
+                            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
+                            className="transition-all duration-300 flex items-center cursor-pointer"
                         >
                             <img
-                                src="/images/Logo Drevelopment No BG.png"
+                                src={isScrolled ? "/images/Logo Drevelopment No BG.png" : "/images/logo hero.png"}
                                 alt="Drevelopment Logo"
                                 className={`object-contain transition-all duration-300 -mt-1.5 ${isScrolled ? 'h-8 md:h-12' : 'h-10 md:h-16'}`}
                             />
@@ -63,7 +64,7 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className={`text-primary hover:text-accent transition-colors font-medium text-sm md:text-base ${isScrolled ? 'md:text-sm' : ''
+                                className={`hover:text-accent transition-colors font-medium text-sm md:text-base ${isScrolled ? 'text-primary md:text-sm' : 'text-white'
                                     }`}
                             >
                                 {link.name}
