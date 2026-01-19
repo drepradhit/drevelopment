@@ -4,15 +4,15 @@ import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 const services = [
     {
         title: 'Web Development',
-        description: 'Bukan sekadar website. Kami membangun mesin penjualan digital 24 jam untuk bisnis Anda. Cepat, aman, dan convert.',
+        description: 'Website cepat, SEO-ready, siap convert pengunjung jadi pelanggan.',
         price: 'Mulai Rp 300rb',
-        tags: ['Landing Page High Convert', 'Company Profile Premium', 'Toko Online Otomatis', 'Aplikasi Web Custom', 'Integrasi Payment Gateway', 'SEO Optimized Structure'],
+        tags: ['Landing Page', 'Company Profile', 'Toko Online'],
     },
     {
         title: 'UI/UX Design',
-        description: 'Tampilan yang bikin customer jatuh cinta pada pandangan pertama. Desain intuitif yang mengarahkan pengunjung untuk membeli.',
+        description: 'Desain modern yang bikin customer jatuh cinta dan mudah digunakan.',
         price: 'Mulai Rp 75rb',
-        tags: ['Riset User Mendalam', 'Wireframe & Flow', 'Visual Design Modern', 'Prototype Interaktif', 'Design System', 'User Testing Ready'],
+        tags: ['Visual Design', 'Prototype', 'User Testing'],
     },
 ];
 
@@ -48,7 +48,7 @@ const Services = () => {
                                 <div className="text-5xl md:text-6xl font-black text-gray-100 select-none">
                                     0{index + 1}
                                 </div>
-                                <div className="px-6 py-2 bg-gradient-to-r from-accent to-orange-600 text-white font-bold rounded-full text-sm shadow-md shadow-orange-200">
+                                <div className="px-4 py-1.5 bg-transparent border-2 border-accent text-accent font-bold rounded-full text-sm">
                                     {service.price}
                                 </div>
                             </div>

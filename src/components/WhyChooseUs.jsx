@@ -8,22 +8,22 @@ const reasons = [
     {
         number: '01',
         title: 'Lightning Performance',
-        description: 'Bukan sekadar website. Kami membangun sistem web yang dioptimasi untuk kecepatan dan SEO Google.',
+        description: 'Website cepat, SEO-optimized untuk ranking Google.',
     },
     {
         number: '02',
         title: 'Direct Communication',
-        description: 'Diskusi langsung dengan developer. Tanpa Project Manager yang memperlambat arus informasi.',
+        description: 'Chat langsung dengan developer. Tanpa perantara.',
     },
     {
         number: '03',
         title: 'Scalable Architecture',
-        description: 'Codebase yang rapi dan modular. Mudah dikembangkan (scale-up) seiring bisnis Anda bertumbuh.',
+        description: 'Kode modular, mudah dikembangkan seiring bisnis tumbuh.',
     },
     {
         number: '04',
         title: 'Unique Brand Identity',
-        description: 'Menolak template pasaran. UI/UX didesain khusus mencerminkan karakter unik brand Anda.',
+        description: 'Desain custom, bukan template. Mencerminkan brand Anda.',
     },
 ];
 
