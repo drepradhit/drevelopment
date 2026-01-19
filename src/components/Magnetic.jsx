@@ -1,35 +1,41 @@
-import React, { useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 
 export default function Magnetic({ children }) {
     const ref = useRef(null);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
 
-    const handleMouse = (e) => {
-        const { clientX, clientY } = e;
-        const { height, width, left, top } = ref.current.getBoundingClientRect();
-        const middleX = clientX - (left + width / 2);
-        const middleY = clientY - (top + height / 2);
+    useEffect(() => {
+        const xTo = gsap.quickTo(ref.current, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
+        const yTo = gsap.quickTo(ref.current, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
 
-        setPosition({ x: middleX * 0.1, y: middleY * 0.1 }); // Magnetic strength
-    };
+        const handleMouse = (e) => {
+            const { clientX, clientY } = e;
+            const { height, width, left, top } = ref.current.getBoundingClientRect();
+            const middleX = clientX - (left + width / 2);
+            const middleY = clientY - (top + height / 2);
 
-    const reset = () => {
-        setPosition({ x: 0, y: 0 });
-    };
+            xTo(middleX * 0.35);
+            yTo(middleY * 0.35);
+        };
 
-    const { x, y } = position;
+        const reset = () => {
+            xTo(0);
+            yTo(0);
+        };
+
+        const element = ref.current;
+        element.addEventListener('mousemove', handleMouse);
+        element.addEventListener('mouseleave', reset);
+
+        return () => {
+            element.removeEventListener('mousemove', handleMouse);
+            element.removeEventListener('mouseleave', reset);
+        };
+    }, []);
 
     return (
-        <motion.div
-            style={{ position: "relative" }}
-            ref={ref}
-            onMouseMove={handleMouse}
-            onMouseLeave={reset}
-            animate={{ x, y }}
-            transition={{ type: "spring", stiffness: 150, damping: 15, mass: 0.1 }}
-        >
+        <div ref={ref} className="relative inline-block">
             {children}
-        </motion.div>
+        </div>
     );
 }
