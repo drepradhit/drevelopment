@@ -44,8 +44,7 @@ const pricingData = {
     ]
 };
 
-const Pricing = () => {
-    const [activeTab, setActiveTab] = useState('web');
+const Pricing = ({ activeTab, setActiveTab }) => {
     const containerRef = useRef(null);
     const cardsRef = useRef([]);
 

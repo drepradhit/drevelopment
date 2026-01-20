@@ -88,7 +88,7 @@ const Hero = () => {
                     <div className="flex flex-col items-center justify-center mb-8 md:mb-12 w-full">
                         {/* Title - Centered */}
                         <div className="relative">
-                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[12.5vw] sm:text-8xl md:text-[10rem] text-primary drop-shadow-xl">
+                            <h1 className="font-black leading-none tracking-tighter font-['Poppins'] text-[13vw] md:text-[11vw] lg:text-[10vw] xl:text-[9rem] text-primary drop-shadow-xl w-full">
                                 DREVELOPMENT
                             </h1>
                         </div>

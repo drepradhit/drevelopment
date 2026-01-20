@@ -5,7 +5,7 @@ const services = [
     {
         title: 'Web Development',
         description: 'Website cepat, SEO-ready, siap convert pengunjung jadi pelanggan.',
-        price: 'Mulai Rp 300rb',
+        price: 'Mulai Rp 150rb',
         tags: ['Landing Page', 'Company Profile', 'Toko Online'],
     },
     {
@@ -16,13 +16,10 @@ const services = [
     },
 ];
 
-const Services = () => {
-    const whatsappBase = 'https://wa.me/6285121021364?text=';
-
+const Services = ({ onViewPackage }) => {
     return (
         <section id="services" className="py-20 bg-cream">
             <div className="container mx-auto px-4 md:px-8">
-                {/* Header Section */}
                 {/* Header Section */}
                 <div className="text-center mb-16 max-w-4xl mx-auto">
                     <h2 className="text-3xl md:text-6xl font-bold font-display leading-tight mb-6 text-primary">
@@ -74,17 +71,17 @@ const Services = () => {
 
                             {/* Footer: CTA & Arrow */}
                             <div className="flex items-center justify-between mt-auto">
-                                <a
-                                    href={`${whatsappBase}${encodeURIComponent(`Halo, saya tertarik konsultasi layanan ${service.title}.`)}`}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="text-primary font-bold text-lg group-hover:text-accent transition-colors flex items-center gap-2"
+                                <button
+                                    onClick={() => onViewPackage(index === 0 ? 'web' : 'uiux')}
+                                    className="text-primary font-bold text-lg group-hover:text-accent transition-colors flex items-center gap-2 cursor-pointer"
                                 >
-                                    Konsultasi Sekarang
-                                </a>
-                                <div className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-300">
+                                    Lihat Paket
+                                </button>
+                                <button
+                                    onClick={() => onViewPackage(index === 0 ? 'web' : 'uiux')}
+                                    className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center group-hover:bg-accent group-hover:border-accent group-hover:text-white transition-all duration-300 cursor-pointer">
                                     <ArrowUpRight className="w-5 h-5" />
-                                </div>
+                                </button>
                             </div>
 
                         </div>

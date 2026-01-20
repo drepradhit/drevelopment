@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState } from 'react';
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 
@@ -10,16 +10,29 @@ const Pricing = lazy(() => import('../components/Pricing'));
 const Footer = lazy(() => import('../components/Footer'));
 
 const Home = () => {
+    const [pricingTab, setPricingTab] = useState('web');
+
+    const handleViewPackage = (tab) => {
+        setPricingTab(tab);
+        // Small delay to ensure state update propagates (though usually fast enough)
+        setTimeout(() => {
+            const pricingSection = document.getElementById('pricing');
+            if (pricingSection) {
+                pricingSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 10);
+    };
+
     return (
         <main className="overflow-hidden">
             <Navbar />
             <Hero />
 
             <Suspense fallback={null}>
-                <Services />
+                <Services onViewPackage={handleViewPackage} />
                 <WhyChooseUs />
                 <Process />
-                <Pricing />
+                <Pricing activeTab={pricingTab} setActiveTab={setPricingTab} />
                 <Footer />
             </Suspense>
         </main>
