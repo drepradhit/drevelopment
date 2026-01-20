@@ -26,7 +26,7 @@ const Navbar = () => {
         <header className="block fixed top-0 left-0 right-0 z-50 p-4">
             <nav
                 className={`mx-auto transition-all duration-500 ${isScrolled
-                    ? 'max-w-2xl rounded-full px-6 py-3 bg-white/60 backdrop-blur-2xl shadow-lg border border-white/30'
+                    ? 'max-w-2xl rounded-full px-6 py-3 bg-white/70 backdrop-blur-2xl shadow-md'
                     : 'max-w-5xl rounded-2xl px-8 py-4 bg-transparent'
                     }`}
             >
